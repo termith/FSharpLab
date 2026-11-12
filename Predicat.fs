@@ -1,12 +1,11 @@
-open System
 // 16.1
 let notDivisible (n, m) = m % n = 0
 
 let rec isPrime (n, limit, d) =
-    function
-    | d when d > limit -> true
-    | n when n % d = 0 -> false
-    | n -> isPrime (n, limit, d + 2)
+    match n with
+    | x when d > limit -> true
+    | x when x % d = 0 -> false
+    | x -> isPrime (x, limit, d + 2)
 
 
 // 16.2
