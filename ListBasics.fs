@@ -19,6 +19,6 @@ let rec dnto n =
 let rec evenn n = 
     let rec create acc count =
         match count with 
-        | _ when count = 0 -> acc
+        | _ when count = -1 -> acc
         | _ -> create (count * 2 :: acc) (count - 1)
-    create [] n
+    create [] (n - 1)
