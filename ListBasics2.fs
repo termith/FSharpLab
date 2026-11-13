@@ -2,7 +2,7 @@
 let rec rmodd = function
     | [] -> []
     | [n] -> [n]
-    | n :: _ :: tail -> n :: rmodd tail
+    | _ :: n :: tail -> n :: rmodd tail
 
 // 39.2
 let rec del_even = function 
