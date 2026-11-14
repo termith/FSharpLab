@@ -1,7 +1,7 @@
 // 39.1
 let rec rmodd = function
     | [] -> []
-    | [n] -> [n]
+    | [n] -> []
     | _ :: n :: tail -> n :: rmodd tail
 
 // 39.2
