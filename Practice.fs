@@ -70,7 +70,7 @@ let rec delete (n: int, xs) =
 // 40.3.3
 let rec sort = function
     | [] -> []
-    | xs -> [smallest xs] @ sort(delete(smallest xs, xs))
+    | xs -> [smallest xs] @ sort(delete(Option.get (smallest xs), xs))
 
 // 40.4
 let rec revrev = function
