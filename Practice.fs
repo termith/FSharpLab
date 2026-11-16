@@ -2,7 +2,7 @@
 let rec sum (p: int -> bool, xs) = 
     match xs with
         | [] -> 0
-        | head :: tail when head = x -> head + sum (p, tail)
+        | head :: tail when p head -> head + sum (p, tail)
         | _ :: tail -> sum (p, tail)
 
 // 40.2.1
