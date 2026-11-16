@@ -54,7 +54,7 @@ let rec minus (xs1, xs2) =
 let rec smallest xs = 
     let rec finder current ls =
         match ls with
-        | [] -> current
+        | [] -> Some(current)
         | head::tail when head < current -> finder head tail
         | _ :: tail -> finder current tail
     let first::tail = xs
