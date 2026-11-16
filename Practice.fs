@@ -65,13 +65,15 @@ let smallest =
 let rec delete (n: int, xs: int list) = 
     match xs with 
     | [] -> []
-    | head :: tail when head = n -> delete (n, tail)
+    | head :: tail when head = n -> tail
     | head :: tail -> [head] @ delete (n, tail)
 
 // 40.3.3
 let rec sort = function
     | [] -> []
-    | xs -> [smallest xs] @ sort(delete(Option.get (smallest xs), xs))
+    | xs -> 
+        let n = Option.get (smallest xs)
+        n :: sort(delete(n, xs))
 
 // 40.4
 let rec revrev = function
