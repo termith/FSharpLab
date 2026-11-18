@@ -1,5 +1,5 @@
 // 49.5.1
-let even_seq = Seq.initInfinite (fun i -> 2 * i)
+let even_seq = Seq.initInfinite (fun i -> 2 * (i + 1))
 
 let factorial n =
     let rec f x a =
